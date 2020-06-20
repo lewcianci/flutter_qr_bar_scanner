@@ -39,6 +39,7 @@ class QrCameraC1 implements QrCamera {
         info = new Camera.CameraInfo();
         for (int i = 0; i < numberOfCameras; i++) {
             Camera.getCameraInfo(i, info);
+            Log.i(TAG, info.facing);
             if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
 
                 camera = Camera.open(i);
