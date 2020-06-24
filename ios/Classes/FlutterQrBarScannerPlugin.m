@@ -131,7 +131,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
     ///////// TODO: dispatch this to a background thread (or at least later on main thread?)!
     /// process the frame with GMV
-    AVCaptureDevicePosition devicePosition = AVCaptureDevicePositionFont;
+    AVCaptureDevicePosition devicePosition = AVCaptureDevicePositionFront;
     UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     // TODO: last known orientation?
     GMVImageOrientation orientation = [GMVUtility imageOrientationFromOrientation:deviceOrientation withCaptureDevicePosition:devicePosition defaultDeviceOrientation:UIDeviceOrientationPortrait];
