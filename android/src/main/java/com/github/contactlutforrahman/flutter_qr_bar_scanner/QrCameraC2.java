@@ -172,7 +172,7 @@ class QrCameraC2 implements QrCamera {
 
         Size jpegSize = getAppropriateSize(jpegSizes);
 
-        final int width = jpegSize.getWidth(), height = jpegSize.getHeight();
+        final int width = 500, height = 500; // stupid hacks
         reader = ImageReader.newInstance(width, height, ImageFormat.YUV_420_888, 5);
 
         list.add(reader.getSurface());
